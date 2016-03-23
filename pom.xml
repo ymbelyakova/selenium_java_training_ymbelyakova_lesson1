@@ -20,7 +20,7 @@
     <dependency>
       <groupId>ru.stqa.selenium</groupId>
       <artifactId>webdriver-factory</artifactId>
-      <version>1.1.46</version>
+      <version>1.1.52</version>
     </dependency>
   </dependencies>
   <build>
@@ -61,14 +61,78 @@
   <!-- profiles -->
   <profiles>
     <profile>
-      <id>local</id>
+      <id>ff_local</id>
       <properties>
-        <env>local</env>
+        <env>fflocal</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://localhost/</site.url>
+        <site.url>http://192.168.0.102</site.url>
         <browser.name>firefox</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+	<profile>
+      <id>ff_remote</id>
+      <properties>
+        <env>ffremote</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub>http://192.168.0.102:4444/wd/hub</grid2.hub>
+        <site.url>http://192.168.0.102</site.url>
+        <browser.name>firefox</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+	<profile>
+      <id>ff_work</id>
+      <properties>
+        <env>ffwork</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub>http://192.168.1.189:4444/wd/hub</grid2.hub>
+        <site.url>http://192.168.0.102</site.url>
+        <browser.name>firefox</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+	<profile>
+      <id>chrome_local</id>
+      <properties>
+        <env>chrlocal</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>http://192.168.0.102</site.url>
+        <browser.name>chrome</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+	<profile>
+      <id>ie_local</id>
+      <properties>
+        <env>ielocal</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>http://192.168.0.102</site.url>
+        <browser.name>internet explorer</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
