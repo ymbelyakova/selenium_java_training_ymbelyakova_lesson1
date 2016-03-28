@@ -37,6 +37,7 @@ public class NewMovie extends selenium_java_training.TestBase {
     driver.findElement(By.name("aka")).clear();
     driver.findElement(By.name("aka")).sendKeys("New Movie by Yulia Belyakova");
     driver.findElement(By.id("submit")).click();
+    Thread.sleep(500);
     try {
       assertFalse(driver.findElement(By.cssSelector("label[for=\"name\"]")).isDisplayed());
     } catch (Error e) {

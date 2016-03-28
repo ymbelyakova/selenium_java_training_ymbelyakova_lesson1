@@ -5,9 +5,10 @@
 		<parameter name="path" value="/"/>
 		<classes>
 		    <class name="slenium_java_training_ymbelyakova.LoginTest"/>
-		    <class name="slenium_java_training_ymbelyakova.NewMovie"/>
 		    <class name="slenium_java_training_ymbelyakova.FindAndAdd"/>
+		    <class name="slenium_java_training_ymbelyakova.NewMovie"/>
 		    <class name="slenium_java_training_ymbelyakova.DeleteMovie2"/>
+		    <class name="slenium_java_training_ymbelyakova.FindAndAdd2"/>
 		</classes>
 	</test>  
 </suite>

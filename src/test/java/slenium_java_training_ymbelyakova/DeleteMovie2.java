@@ -21,6 +21,7 @@ public class DeleteMovie2 extends selenium_java_training.TestBase {
     acceptNextAlert = false;
     driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
+    Thread.sleep(500);
     driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
   }
