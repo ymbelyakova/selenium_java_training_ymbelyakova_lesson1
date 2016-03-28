@@ -4,7 +4,10 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>
-		    <class name="selenium_java_training.LoginTest"/>
+		    <class name="slenium_java_training_ymbelyakova.LoginTest"/>
+		    <class name="slenium_java_training_ymbelyakova.NewMovie"/>
+		    <class name="slenium_java_training_ymbelyakova.FindAndAdd"/>
+		    <class name="slenium_java_training_ymbelyakova.DeleteMovie2"/>
 		</classes>
 	</test>  
 </suite>

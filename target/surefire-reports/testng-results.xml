@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="18265" started-at="2016-03-23T09:29:46Z" finished-at="2016-03-23T09:30:04Z">
+  <suite name="Tests" duration-ms="34178" started-at="2016-03-28T14:59:46Z" finished-at="2016-03-28T15:00:20Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="18265" started-at="2016-03-23T09:29:46Z" finished-at="2016-03-23T09:30:04Z">
-      <class name="selenium_java_training.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:selenium_java_training.LoginTest@3796751b]" name="init" is-config="true" duration-ms="13254" started-at="2016-03-23T12:29:46Z" finished-at="2016-03-23T12:29:59Z">
+    <test name="Test1" duration-ms="34178" started-at="2016-03-28T14:59:46Z" finished-at="2016-03-28T15:00:20Z">
+      <class name="slenium_java_training_ymbelyakova.FindAndAdd">
+        <test-method status="PASS" signature="init()[pri:0, instance:slenium_java_training_ymbelyakova.FindAndAdd@380fb434]" name="init" is-config="true" duration-ms="40" started-at="2016-03-28T18:00:09Z" finished-at="2016-03-28T18:00:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLoginTestHTML()[pri:0, instance:selenium_java_training.LoginTest@3796751b]" name="testLoginTestHTML" duration-ms="4997" started-at="2016-03-23T12:29:59Z" finished-at="2016-03-23T12:30:04Z">
+        <test-method status="PASS" signature="testFindAndAdd()[pri:0, instance:slenium_java_training_ymbelyakova.FindAndAdd@380fb434]" name="testFindAndAdd" duration-ms="8965" started-at="2016-03-28T18:00:09Z" finished-at="2016-03-28T18:00:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAndAdd -->
+      </class> <!-- slenium_java_training_ymbelyakova.FindAndAdd -->
+      <class name="slenium_java_training_ymbelyakova.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:slenium_java_training_ymbelyakova.LoginTest@668bc3d5]" name="init" is-config="true" duration-ms="8970" started-at="2016-03-28T17:59:46Z" finished-at="2016-03-28T17:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLoginTestHTML()[pri:0, instance:slenium_java_training_ymbelyakova.LoginTest@668bc3d5]" name="testLoginTestHTML" duration-ms="2766" started-at="2016-03-28T17:59:55Z" finished-at="2016-03-28T17:59:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginTestHTML -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium_java_training.LoginTest@3796751b]" name="tearDown" is-config="true" duration-ms="1442" started-at="2016-03-23T12:30:04Z" finished-at="2016-03-23T12:30:06Z">
+      </class> <!-- slenium_java_training_ymbelyakova.LoginTest -->
+      <class name="slenium_java_training_ymbelyakova.NewMovie">
+        <test-method status="PASS" signature="init()[pri:0, instance:slenium_java_training_ymbelyakova.NewMovie@6442b0a6]" name="init" is-config="true" duration-ms="164" started-at="2016-03-28T17:59:58Z" finished-at="2016-03-28T17:59:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testNewMovie()[pri:0, instance:slenium_java_training_ymbelyakova.NewMovie@6442b0a6]" name="testNewMovie" duration-ms="11563" started-at="2016-03-28T17:59:58Z" finished-at="2016-03-28T18:00:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewMovie -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:slenium_java_training_ymbelyakova.NewMovie@6442b0a6]" name="tearDown" is-config="true" duration-ms="941" started-at="2016-03-28T18:00:20Z" finished-at="2016-03-28T18:00:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- selenium_java_training.LoginTest -->
+      </class> <!-- slenium_java_training_ymbelyakova.NewMovie -->
+      <class name="slenium_java_training_ymbelyakova.DeleteMovie2">
+        <test-method status="PASS" signature="init()[pri:0, instance:slenium_java_training_ymbelyakova.DeleteMovie2@21bcffb5]" name="init" is-config="true" duration-ms="154" started-at="2016-03-28T18:00:18Z" finished-at="2016-03-28T18:00:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testDeleteMovie()[pri:0, instance:slenium_java_training_ymbelyakova.DeleteMovie2@21bcffb5]" name="testDeleteMovie" duration-ms="1530" started-at="2016-03-28T18:00:19Z" finished-at="2016-03-28T18:00:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMovie -->
+      </class> <!-- slenium_java_training_ymbelyakova.DeleteMovie2 -->
     </test> <!-- Test1 -->
   </suite> <!-- Tests -->
 </testng-results>

@@ -5,13 +5,29 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="selenium_java_training.LoginTest">
+      <class name="slenium_java_training_ymbelyakova.FindAndAdd">
         <methods>
-          <include name="testLoginTestHTML"/>
           <include name="tearDown"/>
           <include name="init"/>
         </methods>
-      </class> <!-- selenium_java_training.LoginTest -->
+      </class> <!-- slenium_java_training_ymbelyakova.FindAndAdd -->
+      <class name="slenium_java_training_ymbelyakova.DeleteMovie">
+        <methods>
+          <include name="testDeleteMovie"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.DeleteMovie -->
+      <class name="slenium_java_training_ymbelyakova.NewMovie">
+        <methods>
+          <include name="testNewMovie"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.NewMovie -->
+      <class name="slenium_java_training_ymbelyakova.LoginTest">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.LoginTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->
