@@ -44,6 +44,8 @@ public class FindAndAdd2 extends selenium_java_training.TestBase {
     driver.findElement(By.name("name")).sendKeys("");
     driver.findElement(By.name("year")).clear();
     driver.findElement(By.name("year")).sendKeys("");
+    driver.findElement(By.id("cover")).clear();
+    driver.findElement(By.id("cover")).sendKeys("C:\\GitHub\\images\\american_crime_story.jpg");
     driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
     //driver.findElement(By.id("submit")).click();
     try {
