@@ -19,10 +19,12 @@ public class NegativeSearch extends selenium_java_training.TestBase {
   @Test
   public void testNegativeSearch() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("q")).clear();
-    driver.findElement(By.id("q")).sendKeys("somenotfoundmovie" + Keys.RETURN);
     WebDriverWait wait =
     		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
+    driver.findElement(By.id("q")).clear();
+    driver.findElement(By.id("q")).sendKeys("somenotfoundmovie" + Keys.RETURN);
+    
     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.title")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("div.content"), "No movies where found."));

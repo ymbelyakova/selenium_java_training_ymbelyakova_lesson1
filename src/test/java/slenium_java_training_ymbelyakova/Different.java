@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Different extends selenium_java_training.TestBase {
   private boolean acceptNextAlert = true;
@@ -17,7 +19,11 @@ public class Different extends selenium_java_training.TestBase {
   @Test
   public void testDifferent() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
+    WebDriverWait wait =
+    		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[alt=\"Add movie\"]")));
     driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("name")));
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Drama");
     driver.findElement(By.name("year")).clear();
@@ -32,7 +38,9 @@ public class Different extends selenium_java_training.TestBase {
     driver.findElement(By.name("country")).sendKeys("UK");
     driver.findElement(By.id("submit")).click();
     driver.get(baseUrl + "/php4dvd/");
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[alt=\"Add movie\"]")));
     driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("name")));
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Thriller");
     driver.findElement(By.name("year")).clear();
@@ -45,7 +53,9 @@ public class Different extends selenium_java_training.TestBase {
     driver.findElement(By.name("genres")).sendKeys("Thriller");
     driver.findElement(By.id("submit")).click();
     driver.get(baseUrl + "/php4dvd/");
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[alt=\"Add movie\"]")));
     driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("name")));
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Animation");
     driver.findElement(By.name("year")).clear();
@@ -60,7 +70,9 @@ public class Different extends selenium_java_training.TestBase {
     driver.findElement(By.name("genres")).sendKeys("Animation");
     driver.findElement(By.id("submit")).click();
     driver.get(baseUrl + "/php4dvd/");
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[alt=\"Add movie\"]")));
     driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("name")));
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Comedy");
     driver.findElement(By.name("year")).clear();

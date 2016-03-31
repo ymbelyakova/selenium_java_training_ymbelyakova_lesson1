@@ -1,6 +1,11 @@
 package slenium_java_training_ymbelyakova;
 
 import java.util.regex.Pattern;
+
+import javax.swing.ImageIcon;
+
+import java.io.File;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.testng.*;
 import org.testng.annotations.*;
@@ -8,7 +13,9 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewMovie extends selenium_java_training.TestBase {
   private boolean acceptNextAlert = true;
@@ -17,10 +24,15 @@ public class NewMovie extends selenium_java_training.TestBase {
   @Test
   public void testNewMovie() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
+    WebDriverWait wait =
+    		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("div.title")));
+    int countorig=driver.findElements(By.cssSelector("div.title")).size();
     driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
     driver.findElement(By.name("imdbid")).clear();
     driver.findElement(By.name("imdbid")).sendKeys("9999999");
     driver.findElement(By.name("name")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("label[for=\"name\"]")));
     try {
       assertTrue(driver.findElement(By.cssSelector("label[for=\"name\"]")).isDisplayed());
     } catch (Error e) {
@@ -37,12 +49,14 @@ public class NewMovie extends selenium_java_training.TestBase {
     driver.findElement(By.name("aka")).clear();
     driver.findElement(By.name("aka")).sendKeys("New Movie by Yulia Belyakova");
     driver.findElement(By.id("submit")).click();
-    Thread.sleep(500);
+    //Thread.sleep(500);
+    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("label[for=\"name\"]")));
     try {
       assertFalse(driver.findElement(By.cssSelector("label[for=\"name\"]")).isDisplayed());
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("label[for=\"year\"]")));
     try {
       assertTrue(driver.findElement(By.cssSelector("label[for=\"year\"]")).isDisplayed());
     } catch (Error e) {
@@ -66,7 +80,10 @@ public class NewMovie extends selenium_java_training.TestBase {
     driver.findElement(By.name("loanname")).clear();
     driver.findElement(By.name("loanname")).sendKeys("2016-03-29");
     driver.findElement(By.id("cover")).clear();
-    driver.findElement(By.id("cover")).sendKeys("C:\\GitHub\\images\\new_movie.jpg");
+    File file = new File("src/test/resource/images/new_movie.jpg");
+    driver.findElement(By.id("cover")).sendKeys(file.getAbsolutePath());
+    //driver.findElement(By.id("cover")).sendKeys(path);
+    //driver.findElement(By.id("cover")).sendKeys("C:\\GitHub\\images\\new_movie.jpg");
     driver.findElement(By.name("trailer")).clear();
     driver.findElement(By.name("trailer")).sendKeys("https://www.youtube.com/watch?v=ap_avaJApm8");
     driver.findElement(By.name("notes")).clear();
@@ -99,7 +116,18 @@ public class NewMovie extends selenium_java_training.TestBase {
     driver.findElement(By.name("music")).sendKeys("Music test");
     driver.findElement(By.name("cast")).clear();
     driver.findElement(By.name("cast")).sendKeys("Cast test");
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("submit")));
     driver.findElement(By.id("submit")).click();
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2")));
+    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("h1")));
+    driver.findElement(By.cssSelector("h1")).click();
+    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("div.title")));
+    int countres=driver.findElements(By.cssSelector("div.title")).size();
+    System.out.println(countorig);
+    System.out.println(countres);
+    if (countres != countorig + 1) System.out.println("Something is wrong");
+    else System.out.println("All is OK");
+    
   }
 
   private boolean isElementPresent(By by) {

@@ -19,12 +19,12 @@ public class PositiveSearch extends selenium_java_training.TestBase {
   @Test
   public void testPositiveSearch() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("q")).clear();
-    //driver.findElement(By.id("q")).sendKeys("somenotfoundmovie" + Keys.RETURN);
-    //driver.findElement(By.id("q")).clear();
-    driver.findElement(By.id("q")).sendKeys("test" + Keys.RETURN);
     WebDriverWait wait =
     		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
+    driver.findElement(By.id("q")).clear();
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
+    driver.findElement(By.id("q")).sendKeys("test" + Keys.RETURN);
     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.title")));
     WebElement note = driver.findElement(By.cssSelector("div.title"));

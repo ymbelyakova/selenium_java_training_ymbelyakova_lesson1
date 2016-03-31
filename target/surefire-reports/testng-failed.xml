@@ -11,12 +11,22 @@
           <include name="init"/>
         </methods>
       </class> <!-- slenium_java_training_ymbelyakova.NegativeSearch -->
+      <class name="slenium_java_training_ymbelyakova.NegativeAdd">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.NegativeAdd -->
       <class name="slenium_java_training_ymbelyakova.ComplexSearch">
         <methods>
           <include name="init"/>
-          <include name="testComplexSearch"/>
         </methods>
       </class> <!-- slenium_java_training_ymbelyakova.ComplexSearch -->
+      <class name="slenium_java_training_ymbelyakova.NewMovie">
+        <methods>
+          <include name="testNewMovie"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.NewMovie -->
       <class name="slenium_java_training_ymbelyakova.PositiveSearch">
         <methods>
           <include name="init"/>
@@ -27,6 +37,16 @@
           <include name="init"/>
         </methods>
       </class> <!-- slenium_java_training_ymbelyakova.LoginTest -->
+      <class name="slenium_java_training_ymbelyakova.DeleteMovie2">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.DeleteMovie2 -->
+      <class name="slenium_java_training_ymbelyakova.FindAndAdd">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.FindAndAdd -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

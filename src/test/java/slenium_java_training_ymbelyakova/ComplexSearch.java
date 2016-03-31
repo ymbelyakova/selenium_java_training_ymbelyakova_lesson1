@@ -20,11 +20,12 @@ public class ComplexSearch extends selenium_java_training.TestBase {
   public void testComplexSearch() throws Exception {
 	driver.get(baseUrl + "/php4dvd/");
 	// проверяем, что нет фильма somenotfoundmovie
+	WebDriverWait wait =
+    		new WebDriverWait(driver, 30);
+	wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
 	WebElement search = driver.findElement(By.id("q"));
 	search.clear();
 	search.sendKeys("somenotfoundmovie" + Keys.RETURN);
-	WebDriverWait wait =
-    		new WebDriverWait(driver, 30);
 	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.title")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("div.content"), "No movies where found."));
@@ -34,6 +35,7 @@ public class ComplexSearch extends selenium_java_training.TestBase {
 	      verificationErrors.append(e.toString());
 	    }
 	// проверяем, что есть фильм test
+	wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
 	search.clear();
     search.sendKeys("test" + Keys.RETURN);
     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
@@ -44,7 +46,7 @@ public class ComplexSearch extends selenium_java_training.TestBase {
       } catch (Error e) {
         verificationErrors.append(e.toString());
       }
-    Thread.sleep(500);
+    //Thread.sleep(500);
     //выбираем категорию Animation и проверяем, что в ней нет test
     driver.findElement(By.id("category-button")).click();
     driver.findElement(By.id("category-menu")).findElement(By.linkText("Animation")).click();

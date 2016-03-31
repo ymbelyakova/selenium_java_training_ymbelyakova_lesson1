@@ -35,6 +35,10 @@ public class LoginTest extends TestBase {
     }
   }
 
+  private boolean isElementsPresent(By locator) {
+	    return driver.findElements(locator).size() > 0;
+	}
+  
   private String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();
