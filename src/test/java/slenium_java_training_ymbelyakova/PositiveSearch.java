@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PositiveSearch extends selenium_java_training.TestBase {
   private boolean acceptNextAlert = true;
@@ -18,8 +20,15 @@ public class PositiveSearch extends selenium_java_training.TestBase {
   public void testPositiveSearch() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.id("q")).clear();
+    //driver.findElement(By.id("q")).sendKeys("somenotfoundmovie" + Keys.RETURN);
+    //driver.findElement(By.id("q")).clear();
     driver.findElement(By.id("q")).sendKeys("test" + Keys.RETURN);
+    WebDriverWait wait =
+    		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.title")));
     WebElement note = driver.findElement(By.cssSelector("div.title"));
+    Thread.sleep(500);
     try {
         assertTrue(note.getAttribute("innerText").matches("Test"));
       } catch (Error e) {

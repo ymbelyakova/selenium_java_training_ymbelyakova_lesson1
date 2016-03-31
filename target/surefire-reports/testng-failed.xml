@@ -5,13 +5,23 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="slenium_java_training_ymbelyakova.ComplexSearch">
+      <class name="slenium_java_training_ymbelyakova.NegativeSearch">
         <methods>
           <include name="tearDown"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.NegativeSearch -->
+      <class name="slenium_java_training_ymbelyakova.ComplexSearch">
+        <methods>
           <include name="init"/>
           <include name="testComplexSearch"/>
         </methods>
       </class> <!-- slenium_java_training_ymbelyakova.ComplexSearch -->
+      <class name="slenium_java_training_ymbelyakova.PositiveSearch">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- slenium_java_training_ymbelyakova.PositiveSearch -->
       <class name="slenium_java_training_ymbelyakova.LoginTest">
         <methods>
           <include name="init"/>

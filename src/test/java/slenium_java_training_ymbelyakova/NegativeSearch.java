@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NegativeSearch extends selenium_java_training.TestBase {
   private boolean acceptNextAlert = true;
@@ -19,6 +21,11 @@ public class NegativeSearch extends selenium_java_training.TestBase {
     driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.id("q")).clear();
     driver.findElement(By.id("q")).sendKeys("somenotfoundmovie" + Keys.RETURN);
+    WebDriverWait wait =
+    		new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.title")));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.content")));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("div.content"), "No movies where found."));
     try {
       assertEquals("No movies where found.", driver.findElement(By.cssSelector("div.content")).getText());
     } catch (Error e) {
