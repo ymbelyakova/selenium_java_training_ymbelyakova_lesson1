@@ -24,8 +24,10 @@ public class PositiveSearch extends selenium_java_training.TestBase {
     wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
     driver.findElement(By.id("q")).clear();
     wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
+    WebElement nftd=driver.findElement(By.cssSelector("div.content"));
     driver.findElement(By.id("q")).sendKeys("test" + Keys.RETURN);
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
+    wait.until(ExpectedConditions.stalenessOf(nftd));
+    //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.title")));
     WebElement note = driver.findElement(By.cssSelector("div.title"));
     Thread.sleep(500);

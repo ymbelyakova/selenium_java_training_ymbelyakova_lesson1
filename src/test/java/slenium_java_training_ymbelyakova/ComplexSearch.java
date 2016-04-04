@@ -37,8 +37,10 @@ public class ComplexSearch extends selenium_java_training.TestBase {
 	// проверяем, что есть фильм test
 	wait.until(ExpectedConditions.elementToBeClickable(By.id("q")));
 	search.clear();
+	WebElement nftd=driver.findElement(By.cssSelector("div.content"));
     search.sendKeys("test" + Keys.RETURN);
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
+    wait.until(ExpectedConditions.stalenessOf(nftd));
+   // wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.title")));
     WebElement title = driver.findElement(By.cssSelector("div.title"));
     try {
@@ -61,7 +63,8 @@ public class ComplexSearch extends selenium_java_training.TestBase {
     //выбираем категорию Comedy и проверяем, что в ней есть test
     driver.findElement(By.id("category-button")).click();
     driver.findElement(By.id("category-menu")).findElement(By.linkText("Comedy")).click();
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
+    wait.until(ExpectedConditions.stalenessOf(nftd));
+    //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content")));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.title")));
     try {
         assertTrue(driver.findElement(By.cssSelector("div.title")).getAttribute("innerText").matches("Test"));

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="44.679" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="11.046" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
@@ -60,12 +60,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testLoginTestHTML" classname="slenium_java_training_ymbelyakova.LoginTest" time="3.282"/>
-  <testcase name="testNegativeSearch" classname="slenium_java_training_ymbelyakova.NegativeSearch" time="1.938"/>
-  <testcase name="testPositiveSearch" classname="slenium_java_training_ymbelyakova.PositiveSearch" time="2.249"/>
-  <testcase name="testComplexSearch" classname="slenium_java_training_ymbelyakova.ComplexSearch" time="4.756"/>
-  <testcase name="testNewMovie" classname="slenium_java_training_ymbelyakova.NewMovie" time="12.379"/>
-  <testcase name="testDeleteMovie" classname="slenium_java_training_ymbelyakova.DeleteMovie2" time="5.024"/>
-  <testcase name="NegativeAdd" classname="slenium_java_training_ymbelyakova.NegativeAdd" time="5.602"/>
-  <testcase name="testFindAndAdd" classname="slenium_java_training_ymbelyakova.FindAndAdd" time="9.449"/>
+  <testcase name="testLoginTestHTML" classname="slenium_java_training_ymbelyakova.LoginTest" time="2.522"/>
+  <testcase name="testNegativeSearch" classname="slenium_java_training_ymbelyakova.NegativeSearch" time="1.854"/>
+  <testcase name="testPositiveSearch" classname="slenium_java_training_ymbelyakova.PositiveSearch" time="1.903"/>
+  <testcase name="testComplexSearch" classname="slenium_java_training_ymbelyakova.ComplexSearch" time="4.767"/>
 </testsuite>
