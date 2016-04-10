@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46010" started-at="2016-03-31T10:10:22Z" finished-at="2016-03-31T10:11:08Z">
+  <suite name="Default suite" duration-ms="35488" started-at="2016-04-10T22:11:04Z" finished-at="2016-04-10T22:11:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46010" started-at="2016-03-31T10:10:22Z" finished-at="2016-03-31T10:11:08Z">
-      <class name="slenium_java_training_ymbelyakova.PositiveSearch">
-        <test-method status="PASS" signature="init()[pri:0, instance:slenium_java_training_ymbelyakova.PositiveSearch@3ac3fd8b]" name="init" is-config="true" duration-ms="7993" started-at="2016-03-31T13:10:22Z" finished-at="2016-03-31T13:10:30Z">
+    <test name="Default test" duration-ms="35488" started-at="2016-04-10T22:11:04Z" finished-at="2016-04-10T22:11:39Z">
+      <class name="selenium_java_training_PO.SearchPO">
+        <test-method status="PASS" signature="init()[pri:0, instance:selenium_java_training_PO.SearchPO@6b71769e]" name="init" is-config="true" duration-ms="10556" started-at="2016-04-11T01:11:04Z" finished-at="2016-04-11T01:11:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testPositiveSearch()[pri:0, instance:slenium_java_training_ymbelyakova.PositiveSearch@3ac3fd8b]" name="testPositiveSearch" duration-ms="37965" started-at="2016-03-31T13:10:30Z" finished-at="2016-03-31T13:11:08Z">
+        <test-method status="PASS" signature="testNegativeSearch()[pri:0, instance:selenium_java_training_PO.SearchPO@6b71769e]" name="testNegativeSearch" duration-ms="2377" started-at="2016-04-11T01:11:15Z" finished-at="2016-04-11T01:11:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeSearch -->
+        <test-method status="PASS" signature="testPositiveSearch()[pri:0, instance:selenium_java_training_PO.SearchPO@6b71769e]" name="testPositiveSearch" duration-ms="22520" started-at="2016-04-11T01:11:17Z" finished-at="2016-04-11T01:11:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPositiveSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:slenium_java_training_ymbelyakova.PositiveSearch@3ac3fd8b]" name="tearDown" is-config="true" duration-ms="481" started-at="2016-03-31T13:11:08Z" finished-at="2016-03-31T13:11:08Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium_java_training_PO.SearchPO@6b71769e]" name="tearDown" is-config="true" duration-ms="735" started-at="2016-04-11T01:11:39Z" finished-at="2016-04-11T01:11:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- slenium_java_training_ymbelyakova.PositiveSearch -->
+      </class> <!-- selenium_java_training_PO.SearchPO -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

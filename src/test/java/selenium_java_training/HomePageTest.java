@@ -21,10 +21,10 @@ public class HomePageTest extends TestBase {
 		homepage = PageFactory.initElements(driver, HomePage.class);
 	}
 
-	//@Test
+/*	//@Test
 	public void testH1Existing() throws InterruptedException {
 		Assert.assertTrue(homepage.getH1() != null);
-	}
+	} */
 
 	//@Test
 	public void test2() throws InterruptedException {

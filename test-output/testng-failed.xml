@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="slenium_java_training_ymbelyakova.NewMovie">
+      <class name="selenium_java_training_PO.NewMoviePO">
         <methods>
-          <include name="testNewMovie"/>
-          <include name="tearDown"/>
           <include name="init"/>
+          <include name="tearDown"/>
+          <include name="testNewMovie"/>
         </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.NewMovie -->
+      </class> <!-- selenium_java_training_PO.NewMoviePO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

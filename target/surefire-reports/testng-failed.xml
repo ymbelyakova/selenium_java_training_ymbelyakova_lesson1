@@ -5,48 +5,25 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="slenium_java_training_ymbelyakova.NegativeSearch">
+      <class name="selenium_java_training_PO.SearchPO">
         <methods>
+          <include name="testNegativeSearch"/>
+          <include name="init"/>
           <include name="tearDown"/>
-          <include name="init"/>
+          <include name="testPositiveSearch"/>
         </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.NegativeSearch -->
-      <class name="slenium_java_training_ymbelyakova.NegativeAdd">
+      </class> <!-- selenium_java_training_PO.SearchPO -->
+      <class name="selenium_java_training_PO.NewMoviePO">
         <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.NegativeAdd -->
-      <class name="slenium_java_training_ymbelyakova.ComplexSearch">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.ComplexSearch -->
-      <class name="slenium_java_training_ymbelyakova.NewMovie">
-        <methods>
+          <include name="testNegativeAdd"/>
           <include name="testNewMovie"/>
-          <include name="init"/>
         </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.NewMovie -->
-      <class name="slenium_java_training_ymbelyakova.PositiveSearch">
+      </class> <!-- selenium_java_training_PO.NewMoviePO -->
+      <class name="selenium_java_training_PO.DeleteMoviePO">
         <methods>
           <include name="init"/>
         </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.PositiveSearch -->
-      <class name="slenium_java_training_ymbelyakova.LoginTest">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.LoginTest -->
-      <class name="slenium_java_training_ymbelyakova.DeleteMovie2">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.DeleteMovie2 -->
-      <class name="slenium_java_training_ymbelyakova.FindAndAdd">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- slenium_java_training_ymbelyakova.FindAndAdd -->
+      </class> <!-- selenium_java_training_PO.DeleteMoviePO -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

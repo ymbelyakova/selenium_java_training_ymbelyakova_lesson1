@@ -4,11 +4,15 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>
-		    <class name="slenium_java_training_ymbelyakova.LoginTest"/>
+		   <class name="selenium_java_training_PO.NewMoviePO"/>
+		   <class name="selenium_java_training_PO.DeleteMoviePO"/>
+		   <class name="selenium_java_training_PO.SearchPO"/> 
+		  
+		   <!-- <class name="slenium_java_training_ymbelyakova.LoginTest"/>
 		    <class name="slenium_java_training_ymbelyakova.NegativeSearch"/>
 		    <class name="slenium_java_training_ymbelyakova.PositiveSearch"/>
-		    <class name="slenium_java_training_ymbelyakova.ComplexSearch"/>
-		   <!-- <class name="slenium_java_training_ymbelyakova.Different"/> 
+		    <class name="slenium_java_training_ymbelyakova.ComplexSearch"/> -->
+		   <!-- <class name="slenium_java_training_ymbelyakova.Different"/>
 		    <class name="slenium_java_training_ymbelyakova.NewMovie"/>
 		    <class name="slenium_java_training_ymbelyakova.DeleteMovie2"/>
             <class name="slenium_java_training_ymbelyakova.NegativeAdd"/>
